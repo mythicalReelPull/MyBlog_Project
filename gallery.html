@@ -1,0 +1,49 @@
+<!-- gallery.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <script defer src="javascript/index_menu.js"></script>
+    <script defer src="javascript/gallery.js"></script>
+</head>
+<body>
+<header>
+    <h1 class="site-title">Image Gallery</h1>
+    <button id="menu-toggle">☰ Menu</button>
+    <nav id="main-menu" class="hidden">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="chatbot.html">Chatbot</a></li>
+            <li><a href="form.html">Form</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="gallery-container">
+    <div class="slider">
+        <img src="images/gallery/altered-vision-LGvIUfBvw5Q-unsplash.jpg" alt="Photo 1" class="slide active">
+        <img src="images/gallery/joey-banks-zUX6103ig7w-unsplash.jpg" alt="Photo 2" class="slide">
+        <img src="images/gallery/joshua-koblin-eqW1MPinEV4-unsplash.jpg" alt="Photo 3" class="slide">
+        <img src="images/gallery/nathan-shintas-WwP2mQm9D2o-unsplash.jpg" alt="Photo 4" class="slide">
+        <img src="images/gallery/wes-tindel-ZcMcyeGzgrk-unsplash.jpg" alt="Photo 5" class="slide">
+
+
+        <!-- more slides here -->
+        <div class="controls">
+            <button id="prev-btn" aria-label="Previous">‹</button>
+            <button id="next-btn" aria-label="Next">›</button>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2025 My Blog - Antonio-Cristian Bumbar</p>
+</footer>
+</body>
+</html>

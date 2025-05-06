@@ -1,0 +1,69 @@
+/* About Page Container */
+.about-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Grid Layout */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.profile-image img {
+    width: 100%;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Section Styling */
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.profile-section {
+    background: #fff;
+    padding-left: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUp 0.8s forwards;
+}
+
+/* Staggered animations */
+#description { animation-delay: 0.2s; }
+#education { animation-delay: 0.4s; }
+#experience { animation-delay: 0.6s; }
+#skills { animation-delay: 0.8s; }
+#achievements { animation-delay: 1s; }
+
+/* Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+}
+

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/form.css">
+    <script defer src="javascript/index_menu.js"></script>
+    <script defer src="javascript/form.js"></script>
+</head>
+<body>
+<header>
+    <h1 class="site-title">Contact Us Form</h1>
+    <button id="menu-toggle">☰ Menu</button>
+    <nav id="main-menu" class="hidden">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="chatbot.html">Chatbot</a></li>
+            <li><a href="form.html">Form</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="form-container">
+    <form id="contact-form" action="/submit" method="post" novalidate onsubmit="return validateForm()">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="salutation">Salutation</label>
+            <select id="salutation" name="salutation">
+                <option value="">--None--</option>
+                <option>Mr.</option>
+                <option>Ms.</option>
+                <option>Mrs.</option>
+                <option>Miss</option>
+            </select>
+
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" name="firstname" required>
+
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname" required>
+
+            <label>Gender</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="Male" required> Male</label>
+                <label><input type="radio" name="gender" value="Female"> Female</label>
+            </div>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="birthday">Birthday</label>
+            <input type="date" id="birthday" name="birthday">
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="">--None--</option>
+                <option>USA</option>
+                <option>Canada</option>
+                <option>Brazil</option>
+                <option>Romania</option>
+            </select>
+
+            <label for="address">Address</label>
+            <textarea id="address" name="address" rows="3"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Additional Information</legend>
+            <label>Interests</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="interests" value="Sports"> Sports</label>
+                <label><input type="checkbox" name="interests" value="Music"> Music</label>
+                <label><input type="checkbox" name="interests" value="Movies"> Movies</label>
+            </div>
+
+            <label for="other-interest">Other Interest</label>
+            <input type="text" id="other-interest" name="other-interest">
+
+            <label for="cv">Upload your CV</label>
+            <input type="file" id="cv" name="cv" accept="application/pdf">
+
+            <label>Preferred Communication</label>
+            <div class="radio-group">
+                <label><input type="radio" name="communication" value="Email"> Email</label>
+                <label><input type="radio" name="communication" value="Phone"> Phone</label>
+            </div>
+
+            <label for="phone-number">Phone Number</label>
+            <input type="tel" id="phone-number" name="phone-number">
+        </fieldset>
+
+        <button type="submit" class="btn-submit">Submit</button>
+    </form>
+</main>
+
+<footer>
+    <p>&copy; 2025 My Blog</p>
+</footer>
+</body>
+</html>
